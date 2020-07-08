@@ -117,7 +117,7 @@ for i in df_trade.Ticker:
     except:
         pass
     
-df_List.to_csv("opcoes.csv")
+df_trade.to_csv("opcoes.csv")
 df_trade = df_trade[df_trade["Price"]!=0.0]
 df_trade = df_trade[(df_trade["Price"]/df_trade["Strike"]>0.99) & (df_trade["Price"]/df_trade["Strike"]<1.01)]
 
